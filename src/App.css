@@ -1,38 +1,266 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Secular+One&display=swap");
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+  overflow-x: hidden;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #23241f;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+::-webkit-scrollbar-thumb:vertical {
+  width: 10px !important;
+  border-radius: 4px !important;
+  background: rgb(255, 255, 255) !important;
 }
-
-.App-header {
-  background-color: #282c34;
+/* ---------------navbar------------------------ */
+.navbar{
+  height: 50px;
+  width: 100vw;
+  display: flex;
+  justify-content: left;
+  background-color: blueviolet;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #FFF;
+  border-bottom: 2px solid #FFF;
+}
+.navbar h2{
+  cursor: pointer;
+}
+/* ------------------form pages--------------------- */
+.main-form1{
   min-height: 100vh;
+  width: 100vw;
+  background-color: #efefef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main-form1 .form1{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  min-height:70vh;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.main-form1 h2{
+  margin-top: 20px;
+}
+.form1 input{
+  width: 100%;
+  border: 1px solid #0A0A0A;
+  padding: 6px;
+  outline: none;
+}
+.nameInput{
+  margin-bottom: 20px;
+}
+.radios{
+  display: flex;
+  justify-content: space-around;
+  overflow: visible;
+  align-items: center;
+  flex-direction: row;
+  margin: 10px;
+}
+.radios .radio input[type="radio"]{
+  height: 18px;
+  padding: 2px;
+  accent-color: blueViolet;
+  cursor: pointer;
+}
+.avatarDiv input[type="file"]{
+  cursor: pointer;
+  margin-bottom: 6px;
+}
+.avatarDiv input #file-upload-button{
+  background-color: blueviolet;
+  color: #FFF;
+}
+.imageDiv{
+  height: 180px;
+  width: 180px;
+  position: relative;
+}
+.imageDiv img{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+}
+.avatarDemo{
+  opacity: .4;
+}
+.selectDiv{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.selectDiv select{
+  width: 100%;
+  padding: 6px;
+  outline: none;
+}
+.selectDiv select option{
+  color: #000000;
+}
+.btn{
+  color: #FFF;
+  background-color: blueviolet;
+  width: 100%;
+  height: 43px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+.btn:hover{
+  background-color: #efefef;
+  color: blueviolet;
+  font-size: 17px;
+  border: 2px solid blueviolet;
+}
+.errorMessage{
+  color: rgb(255, 0, 0);
+}
+.pdfDiv{
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: 1px solid rgb(0, 0, 0);
+}
+.pdfDiv img{
+  height: 30px;
+  width: 30px;
+}
+.termsAndC{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.termsAndC input{
+  width: 22px;
+  height: 23px;
+  padding: 3px;
+  margin: 4px;
+}
+.termsAndC input[type="checkbox"]{
+  accent-color: blueviolet;
+}
+.termsC{
+  color: blue;
+}
+
+
+/* ------------Home -------------------------- */
+.mainHome{
+  min-height: 95vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding-top: 20px;
+  background-color: blueviolet;
+}
+.mainHome img{
+  margin-bottom: 20px;
+}
+.imageDivH{
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainHome .home-avatar{
+  height: 100px;
+  width: 100px;
+  /* border-radius: 50%; */
+  background-position: center;
+  background-size: cover;
+  padding: 6px;
+  border: 1px solid #FFF;
+}
+hr{
+  background-color: #000000;
+  height: 1px;
+  width: 100%;
+  margin-top: 4px;
+}
+.mainHome p{
+  padding-top:4px;
+  padding-bottom: 6px;
+}
+.Rbtn{
+  padding: 6px;
+  background-color: #FFF;
+  width: 70px;
+  border: none;
+  cursor: pointer;
+}
+.home-content{
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 30px;
+}
+.terms-span{
+  color: rgb(58, 250, 58);
 }
 
-.App-link {
-  color: #61dafb;
+/* -------------------Progress_bar------------------------ */
+.Progress-Div{
+  min-height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  background-color: #efefef;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mainProgress-conatiner{
+  margin-bottom: 12px;
+  min-height: 40px;
+  width: 100%;
+  max-width: 800px;
+  margin-left: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin-right: 12px;
+}
+.Progress-container{
+  height: 25px;
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid blueviolet;
+  border-radius: 12px;
+}
+.color-fill-P{
+  height: 100%;
+  background-color: blueviolet;
+  transition: 0.5s ease-in-out ;
 }

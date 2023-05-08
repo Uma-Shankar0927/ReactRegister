@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useState} from "react";
+import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {Form1, Form2 ,Form3, Home, Navbar, ProgressBar} from './components/index'
 
-function App() {
+const App = () => {
+  const [formdata, setFormData] = useState({
+    name: "",
+    gender: "",
+    avatar: "",
+    course: "",
+    email:"",
+    language:"",
+    resume: "",
+    terms: false,
+    password: "",
+    BuySell: "",
+    image: "",
+    category: ""
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Navbar formdata={formdata} setFormData={setFormData}/>
+        <Routes>
+          <Route path="/" element={<Form1 formdata={formdata} setFormData={setFormData}/>}/>
+          <Route path="/form" element={<Form2 formdata={formdata} setFormData={setFormData} />}/>
+          <Route path="/form2" element={<Form3 formdata={formdata} setFormData={setFormData} />}/>
+          <Route path="/home" element={<Home formdata={formdata} setFormData={setFormData}/>}/>
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
