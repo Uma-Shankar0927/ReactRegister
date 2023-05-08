@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import './App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import {Form1, Form2 ,Form3, Home, Navbar, ProgressBar} from './components/index'
+import {Form1, Form2 ,Form3, Home, Navbar} from './components/index'
 
 const App = () => {
   const [formdata, setFormData] = useState({
